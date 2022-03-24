@@ -7,7 +7,9 @@ export default function Data() {
   useEffect(() => {
     async function getData() {
       try {
-        const { quotes } = await getApi();
+        const {quotes}  = await getApi();
+        //{obj로 감싸준 이유는 quotes만 뽑아 바로 볼수있게 하기위해서.. ! }
+        console.log(quotes, "quoteS?????")
         setData(quotes);
       } catch (error) {
         console.error(error);
